@@ -1,1 +1,197 @@
-@import url('normalize.min.less');
+/* Декоративные стили */
+
+// Стилизация header (шапка с навигацией)
+.header {
+	background: @dark;
+}
+
+.header-nav {
+	&__logo {
+		height: 26px;
+		width: 139px;
+	}
+
+	&__list {
+		list-style: none;
+	}
+}
+
+.site-list {
+	&__item a {
+		.reg();
+		color: @white;
+		font-size: 1.6rem;
+	}
+}
+
+
+@media (min-width: @tablet) {
+	.site-list__item:hover {
+		transform: scale(1.5);
+		transition: all .2s;
+	}
+}
+
+
+
+
+// Стилизация main
+.heading {
+	.bold();
+	font-size: 3.2rem;
+	text-align: center;
+}
+
+.heading__line {
+	position: relative;
+	&:after {
+	  background-color: @lilac;
+	  content: "";
+	  display: block;
+	  height: 3px;
+	  left: 0;
+	  margin: 0 auto;
+	  position: absolute;
+	  right: 0;
+	  bottom: 0px;
+	  width: 41px;
+	}
+}
+
+
+@media (min-width: @tablet) {
+	.heading__line:after {
+		top: 50px;
+	}
+
+}
+
+
+@media (min-width: @desktop) {
+	.heading:hover {
+		animation: rotate .6s;
+	}
+}
+
+
+
+
+// Стилизация Contacts
+.heading__light {
+	color: @white;
+}
+
+.contacts {
+	&-span {
+		.reg();
+		color: @grey;
+		font-size: 1.2rem;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	&-text {
+		.domine();
+		color: @white;
+		font-size: 1.4rem;
+		margin: .5rem auto 2rem;
+		a {
+			color: inherit;
+		}
+	}
+}
+
+
+@media (min-width: @tablet) {
+	.contacts {
+		border: 1px solid @white;
+		border-radius: 10px;
+		&-text {
+			margin: 1rem auto 0;
+		}
+	}
+}
+
+
+@media (min-width: @desktop) {
+	.contacts-text:hover {
+		transition: all .3s;
+		color: @lilac;
+	}
+}
+
+
+
+
+// Стилизация WriteUs
+.writeUs {
+	background: @white;
+	border-radius: 10px;
+}
+
+.heading__dark {
+	color: @dark;
+}
+
+.form {
+	&-label {
+		.reg();
+		color: @grey;
+		font-size: 1.2rem;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	&-input {
+		.reg();
+		border: none;
+	  border-radius: 5px; 
+		color: @dark;
+		font-size: 1.4rem;
+		line-height: 2.4rem;
+		margin: 1rem 2.3rem 2.5rem;
+		outline: none;
+		padding: .9rem 2.5rem .9rem 4.5rem;
+	 
+		&__envelope {
+			background: @light-grey url(../img/icons/Envelope.png) no-repeat 2rem center;
+		}
+	  &__message {
+			background: @light-grey url(../img/icons/Message.png) no-repeat 2rem 1.5rem;
+	  	margin-bottom: 4rem;	
+	  }
+	}
+	&-btn {
+		.bold();
+		background: @lilac;
+		border: none;
+		border-radius: 50px;
+		color: @white;
+		font-size: 1.8rem;
+		max-width: 320px;
+		min-height: 60px;
+		width: 80%;
+	}
+}
+
+
+@media (min-width: @tablet) {
+	.form {
+		margin: auto;	
+		&-label {
+  		margin-left: 2.3rem;
+			text-align: left;
+		}
+		&-input {
+  		padding-right: 4.5rem;
+		}
+	}
+}
+
+
+@media (min-width: @desktop) {
+	.form-btn:hover {
+		background: @dark-lilac;
+		font-size: 2rem;
+		cursor:	pointer;
+		transition: all 0.2s;
+	}
+}
