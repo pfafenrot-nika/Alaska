@@ -17,7 +17,7 @@ var del = require("del");
 
 
 gulp.task("style", function () {
-	gulp.src("less/style.less")
+	gulp.src("less/main.less")
 	  .pipe(plumber())
 	  .pipe(less())
 	  .pipe(postcss([
@@ -25,7 +25,7 @@ gulp.task("style", function () {
 	  ]))
 	  .pipe(gulp.dest("build/css"))
 	  .pipe(minify())
-	  .pipe(rename("style.min.css"))
+	  .pipe(rename("main.min.css"))
 	  .pipe(gulp.dest("build/css"));
 });
 
@@ -65,7 +65,7 @@ gulp.task("serve", function () {
 
 gulp.task("copy", function () {
 	return gulp.src([
-		"fonts/**/*.{woff,woff2}",
+		"fonts/**/*.{ttf}",
 		"img/**",
 		"js/**",
 		"form/**"
