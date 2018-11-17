@@ -18,7 +18,7 @@
   Html и Css отформатированны в соответствии с **Code Style Google**.
 
 
-Ссылка на страницу: <http://alaska.nika-plafenrot.ru/>
+Ссылка на страницу: <https://nika-pfafenrot.ru/>
 
 
 
