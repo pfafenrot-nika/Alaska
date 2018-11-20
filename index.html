@@ -15,8 +15,14 @@
 <body>
 	<header class="header">
 		<nav class="header-nav">
-			<div class="header-nav__wrapper">
-				<a class="header-nav__logo" href="#">
+			<a class="header-nav__btn menu-btn" href="#">
+				<span class="menu-btn__span"></span>
+			</a>
+			<a class="header-nav__logo logo-mobile" href="#">
+				<img src="img/Logo_white.png" alt="Alaska" class="logo">
+			</a>
+			<div class="header-nav__wrapper visually-hidden">
+				<a class="header-nav__logo logo-desc" href="#">
 					<img src="img/Logo_white.png" alt="Alaska" class="logo">
 				</a>
 				<ul class="header-nav__list site-list">
@@ -93,6 +99,27 @@
 			</form>
 		</div>
 	</main>
+
+	<!-- Подключение библиотеки JQuery -->
+	<script src="js/scripts.js"></script>
+	
+	<!-- Скрипт для работы мобильного меню -->
+    <script>
+		$(document).ready(function(){
+			var btn = $('.header-nav__btn');
+			var menu_mobile = $('.header-nav__wrapper');
+			var nav_link = $('.header-nav__wrapper a');
+
+			btn.click(function(){
+				btn.toggleClass('menu-btn__active');
+				menu_mobile.toggleClass('visually-hidden');
+			});
+			nav_link.click(function(){
+				btn.toggleClass('menu-btn__active');
+				menu_mobile.toggleClass('visually-hidden');
+			});
+		});
+	</script>
 </body>
 </html>
 

@@ -161,6 +161,9 @@ img {
   height: auto;
   max-width: 100%;
 }
+.visually-hidden {
+  display: none;
+}
 /* Переменные */
 @font-face {
   font-family: 'Montserrat-Regular';
@@ -226,6 +229,9 @@ img {
 .header-nav__list {
   margin: 0;
   padding: 0;
+}
+.header-nav__wrapper {
+  margin-top: 30px;
 }
 .site-list__item {
   margin: 1rem;
@@ -355,6 +361,65 @@ img {
     -webkit-transform: scale(1.5);
             transform: scale(1.5);
     transition: all 0.2s;
+  }
+}
+.menu-btn {
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  float: left;
+  bottom: 15px;
+}
+.menu-btn__span,
+.menu-btn__span:after,
+.menu-btn__span:before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20px;
+  height: 2px;
+  background: #a054c6;
+  margin-top: -1px;
+  margin-left: -10px;
+  transition: 0.3s;
+}
+.menu-btn__span:before {
+  content: "";
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+.menu-btn__span:after {
+  content: "";
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+.menu-btn__active .menu-btn__span {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+.menu-btn__active .menu-btn__span:after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.menu-btn__active .menu-btn__span:before {
+  display: none;
+}
+.logo-mobile {
+  margin-left: -35px;
+  display: inline;
+}
+.logo-desc {
+  display: none;
+}
+@media (min-width: 768px) {
+  .menu-btn,
+  .menu-btn__span,
+  .logo-mobile {
+    display: none;
+  }
+  .logo-desc {
+    display: inline;
   }
 }
 .heading {
